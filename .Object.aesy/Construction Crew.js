@@ -1,14 +1,15 @@
 function solve(dehidraworker) {
     
-    let weight = dehidraworker.weight;
-    let experience = dehidraworker.experience;
-    let levelOfHydrated = dehidraworker.levelOfHydrated;
-    let dizziness = dehidraworker.dizziness;
-    if (dizziness) {
-        levelOfHydrated = weight * 0.1 * experience;
-        dizziness = false
-    }
-    let HidratatedWorker = { weight, experience, levelOfHydrated, dizziness};
+    let HidratatedWorker = 
+    {   weight : dehidraworker.weight, 
+        experience : dehidraworker.experience, 
+        levelOfHydrated : dehidraworker.levelOfHydrated, 
+        dizziness : dehidraworker.dizziness,
+        if (dizziness) {
+            levelOfHydrated = weight * 0.1 * experience;
+            dizziness = false
+        }
+    };
     return HidratatedWorker;    
 }
 solve({ weight: 80,
