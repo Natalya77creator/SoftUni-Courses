@@ -1,7 +1,7 @@
 function solve() {
   let input = document.getElementById("input").value;
-  let arrayInput = input.split(".").filter(x => x.lenght > 0);
   let put = document.getElementById("output");
+  let arrayInput = input.split(".");
   put.innerHTML = "";
   
   for (let i = 0; i < arrayInput.length; i += 3) {
@@ -12,7 +12,7 @@ function solve() {
         res.push(arrayInput[i+x])
       }
     }
-    let resTex = res.join(". ") + "."
+    let resTex = res.join(".").trim() + ".".trim()
     put.innerHTML += `<p>${resTex}</p>`
   }
 }
