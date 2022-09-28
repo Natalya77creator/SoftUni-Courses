@@ -1,9 +1,11 @@
 function lockedProfile() {
+
     const btns = [...document.getElementsByTagName('button')];
     btns.forEach(btn => btn.addEventListener('click', showHide));
  
     function showHide(event) {
         const button = event.target;
+        debugger
         const profile = button.parentNode;
         const moreInformation = profile.getElementsByTagName('div')[0];
         const lockStatus = profile.querySelector('input[type="radio"]:checked').value;
@@ -15,6 +17,7 @@ function lockedProfile() {
             } else if (button.textContent === 'Hide it') {
                 moreInformation.style.display = 'none';
                 button.textContent = 'Show more';
+                debugger
             }
         }
     }
