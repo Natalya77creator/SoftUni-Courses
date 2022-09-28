@@ -4,11 +4,11 @@
        let input = document.getElementById('newText').value;
        let value = input.value
        let li = document.createElement('li');
-       li.textContent = value;
+       li.textContent = value + ' '
        let delbnt = document.createElement('a');
        delbnt.textContent = 'Deleted';
        delbnt.addEventListener('click', function (event) {
-            console.log(event);
+            event.target.parentElement.remove()
        })
        li.append(delbnt);
        ul.append(li);
