@@ -9,6 +9,7 @@ function attachEventsListeners() {
       e.target.parentElement.querySelector("input[type=text]").value
     );
     let unit = e.target.id;
+    debugger
 
     switch (unit) {
       case "daysBtn":
