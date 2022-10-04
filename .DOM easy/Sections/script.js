@@ -4,10 +4,10 @@ function create(words) {
       let paragraph = document.createElement('p');
       paragraph.textContent = word;
       paragraph.style.display = 'none';
+      debugger;
       div.appendChild(paragraph);
       div.addEventListener('click', function() {
          paragraph.style.display = 'block';
-         debugger;
       })
       let con = document.getElementById('content');
       con.appendChild(div)
